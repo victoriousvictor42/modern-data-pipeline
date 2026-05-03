@@ -1,8 +1,8 @@
-# Secure Authentication
+# Securing the Authentication
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "project_id.json"
 client = bigquery.Client()
 
-# 1. Create the Dataset if it doesn't exist
+# 1. Creating the Dataset if it doesn't exist
 dataset_id = f"{client.project}.raw_ecommerce"
 dataset = bigquery.Dataset(dataset_id)
 dataset.location = "US"  # Explicitly setting location to match your error
@@ -13,7 +13,7 @@ try:
 except Exception:
     print(f"Dataset {dataset_id} already exists")
 
-# 2. Upload the Mock Data we just generated
+# 2. Uploading the Mock Data we just generated
 df = pd.read_csv('olist_orders_dataset.csv')
 table_ref = f"{dataset_id}.olist_orders"
 
@@ -27,7 +27,7 @@ client = bigquery.Client()
 project_id = client.project
 dataset_id = f"{project_id}.raw_ecommerce"
 
-# Create tables in the cloud
+# Creating tables in the cloud
 create_table_query = f"""
 CREATE OR REPLACE TABLE `{dataset_id}.olist_orders_features` AS
 WITH raw_orders AS (
@@ -55,7 +55,7 @@ query_job.result()  # This waits for the cloud to finish the job
 print(f"✅ Feature Store Table '{dataset_id}.olist_orders_features' is now ready for AI!")
 
 # creating the visualizations
-# 1. Load and Standardize Dates
+# 1. Loading and Standardizing Dates
 df = pd.read_csv('olist_orders_dataset.csv')
 df['order_purchase_timestamp'] = pd.to_datetime(df['order_purchase_timestamp'])
 df['order_delivered_customer_date'] = pd.to_datetime(df['order_delivered_customer_date'])
