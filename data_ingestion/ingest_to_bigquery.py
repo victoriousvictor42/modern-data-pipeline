@@ -4,7 +4,7 @@ import pandas as pd
 
 # 1. Setup Connection (Modernization Step)
 # Ensure you have your Google Credentials JSON file path set
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "private_id.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "project_id.json"
 
 try:
     client = bigquery.Client()
