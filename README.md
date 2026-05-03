@@ -1,5 +1,5 @@
 🚀 E-Commerce Data Modernization & Predictive Logistics
-End-to-End Cloud Data Pipeline | BigQuery | dbt | Random Forest AI
+End-to-End Cloud Data Pipeline | BigQuery | Random Forest AI
 
 📌 Executive Summary
 This project demonstrates a full-scale Data Modernization of a legacy e-commerce system. I migrated siloed on-premise data to a Google Cloud Platform (GCP) data warehouse, engineered a Feature Store using modern SQL practices, and deployed a Machine Learning model to predict logistics bottlenecks.
