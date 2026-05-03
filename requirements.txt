@@ -1,0 +1,6 @@
+google-cloud-bigquery
+pandas
+scikit-learn
+matplotlib
+seaborn
+db-dtype
