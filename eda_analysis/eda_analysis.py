@@ -1,4 +1,4 @@
-
+# Secure Authentication
 os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "your_credentials.json"
 client = bigquery.Client()
 
