@@ -28,7 +28,7 @@ def upload_silo_data():
             table_name = file.replace(".csv", "")
             table_ref = f"{dataset_id}.{table_name}"
 
-            # Load "Dirty" Data locally to simulate pre-processing
+            # Loading "Dirty" Data locally to simulate pre-processing
             df = pd.read_csv(file)
 
             # Basic Engineering check: ensure no empty critical IDs
