@@ -1,5 +1,5 @@
 # Secure Authentication
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "your_credentials.json"
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "project_id.json"
 client = bigquery.Client()
 
 # 1. Create the Dataset if it doesn't exist
